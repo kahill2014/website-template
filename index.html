@@ -4,10 +4,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<script src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	
 	<style>
 		body{
 			font-family: 'Open Sans', sans-serif;
 		}
+		.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
 	</style>
 	<title>Austin Hill & Assoc.</title>
 </head>
@@ -30,10 +52,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li style="padding-left:15em;"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-        <li style="padding-left:10em;"><a href="#">Services</a></li>
-		<li style="padding-left:10em;"><a href="#">About</a></li>
-		<li style="padding-left:10em;"><a href="#">Contact</a></li>
+        <li style="padding-left:15em;"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+        <li style="padding-left:10em;"><a href="services.html">Services</a></li>
+		<li style="padding-left:10em;"><a href="about.html">About</a></li>
+		<li style="padding-left:10em;"><a data-target="#contact" role="button" data-toggle="modal">Contact</a></li>
       </ul>
       <form class="navbar-form navbar-right">
         <div class="form-group">
@@ -44,25 +66,72 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-	
+    <!-- Modal -->
+    <div id="contact" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Contact - Austin Hill & Associates</h4>
+        </div>
+        <div class="modal-body">
+<form class="form-horizontal" name="commentform" method="post" action="https://formspree.io/kahill2014@gmail.com">
+    <div class="form-group">
+        <label class="control-label col-md-4" for="first_name">First Name</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4" for="last_name">Last Name</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4" for="email">Email Address</label>
+        <div class="col-md-6">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4" for="comment">Question or Comment</label>
+        <div class="col-md-6">
+            <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
+        </div>
+    </div>
+</form>
+        </div><!-- End of Modal body -->
+        </div><!-- End of Modal content -->
+        </div><!-- End of Modal dialog -->
+    </div>
+	<!-- End of Modal -->
 </div>
 <div class="col-md-12 text-center">
 	<div class="col-md-6 col-md-offset-3 img-rounded" style="background: rgba(0, 0, 0, .5); margin-top: 15%; width: 50%; height: 25em;">
 	
 		<h1 style="color: white;">
-			This Is A Filler Header
+			Who is Austin Hill & Associates?
 		</h1>
-		
+		<br />
 		<h3 style="color: white;">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac odio quis est luctus dictum. Nulla mollis urna ac sapien finibus tempus. Curabitur eget neque risus. Fusce vestibulum aliquet iaculis. Donec sit amet commodo tellus. Donec ligula leo, varius in nisl nec, blandit pretium justo. Suspendisse laoreet nibh eget nunc lacinia sagittis.
-		</h1>
+			We are an executive search firm that specializes in placing supervisors, managers, and executives in the consumer package goods industry.
+		</h3>
+		<h3 style="color: white;">
+			We are a 100% veteran owned company.
+		</h3>
+		<br />
 		<br />
 		<button type="button" class="btn btn-danger btn-lg">LEARN MORE</button>
 	
 	</div>
 	
 </div>
-
 
 </body>
 </html>

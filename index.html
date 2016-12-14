@@ -13,57 +13,50 @@
 			font-family: 'Open Sans', sans-serif;
 		}
 		.modal {
-  text-align: center;
-}
+		  text-align: center;
+		}
 
-@media screen and (min-width: 768px) { 
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
-}
+		@media screen and (min-width: 768px) { 
+		  .modal:before {
+			display: inline-block;
+			vertical-align: middle;
+			content: " ";
+			height: 100%;
+		  }
+		}
 
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-}
+		.modal-dialog {
+		  display: inline-block;
+		  text-align: left;
+		  vertical-align: middle;
+		}
 	</style>
 	<title>Austin Hill & Assoc.</title>
 </head>
-<body style="background: url('assets/sample_home.jpg') no-repeat center center; min-height: 100%;">
+<body style="background: url('assets/home.jpg') no-repeat center center; min-height: 100%;">
 
 <div class="container">
-  <nav class="navbar navbar-default navbar-fixed-top col-md-12">
-  <div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid  col-md-12">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header col-md-3">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
+        <span class="nav-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Austin Hill & Assoc.</a>
+      <a href="#" class="navbar-left"><img src="assets/logo.png" style="height: 3.5em;"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse row">
-      <ul class="nav navbar-nav col-md-9">
-        <li class="col-md-2"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-        <li class="col-md-2"><a href="services.html">Services</a></li>
-		<li class="col-md-2"><a href="about.html">About</a></li>
-		<li class="col-md-2"><a data-target="#contact" role="button" data-toggle="modal">Contact</a></li>
-		<li class="col-md-4"><form class="nav navbar-nav navbar-form navbar-right row">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" />
-		  
-        </div>
-		<button type="submit" class="btn btn-default">Submit</button>
-        
-        </form></li>
+    <div class="collapse navbar-collapse navbar-collapse-1">
+
+      <ul class="nav navbar-nav col-md-8 pull-right">
+        <li class="col-md-3"><a href="index.html">Home</a></li>
+        <li class="col-md-3"><a href="services.html">Services</a></li>
+		<li class="col-md-3"><a href="about.html">About</a></li>
+		<li class="col-md-3"><a data-target="#contact" role="button" data-toggle="modal">Contact</a></li>
       </ul>
       
     </div><!-- /.navbar-collapse -->
@@ -75,39 +68,45 @@
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Contact - Austin Hill & Associates</h4>
+            <h2 class="modal-title">Contact - Austin Hill & Associates</h4>
         </div>
         <div class="modal-body">
 <form class="form-horizontal" name="commentform" method="post" action="send_form_email.php">
     <div class="form-group">
-        <label class="control-label col-md-4" for="first_name">First Name</label>
+        <label class="control-label col-md-4" for="first_name"  style="color: #B60E3F">First Name</label>
         <div class="col-md-6">
             <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"/>
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-md-4" for="last_name">Last Name</label>
+        <label class="control-label col-md-4" for="last_name"  style="color: #B60E3F">Last Name</label>
         <div class="col-md-6">
             <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-md-4" for="email">Email Address</label>
+        <label class="control-label col-md-4" for="email"  style="color: #B60E3F">Email Address</label>
         <div class="col-md-6">
             <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-md-4" for="comment">Question or Comment</label>
+        <label class="control-label col-md-4" for="comment"  style="color: #B60E3F">Question or Comment</label>
         <div class="col-md-6">
             <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
         </div>
     </div>
     <div class="form-group">
-        <div class="col-md-6">
-            <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
+        <div class="col-md-6"  style="margin-left: -.85em;">
+            <button type="submit" value="Submit" class="btn btn-custom pull-right img-rounded">Send</button>
         </div>
     </div>
+	
+	<div class="form-group">
+		<label class="control-label col-md-12"><span style="color: #B60E3F">Phone number:</span> XXX-XXX-XXXX</label>
+		<label class="control-label col-md-12"><span style="color: #B60E3F">Fax number:</span> XXX-XXX-XXXX</label>
+	</div>
+	
 </form>
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
@@ -125,12 +124,9 @@
 		<h3 style="color: white;">
 			We are an executive search firm that specializes in placing supervisors, managers, and executives in the consumer package goods industry.
 		</h3>
-		<h3 style="color: white;">
-			We are a 100% veteran owned company.
-		</h3>
 		<br />
 		<br />
-		<button type="button" class="btn btn-danger btn-lg">LEARN MORE</button>
+		<button type="button" class="btn btn-danger btn-lg" style="background-color: #B60E3F; border-color: #3F2E3F">LEARN MORE</button>
 	
 	</div>
 	

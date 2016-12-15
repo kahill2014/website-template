@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['email'])) {
  
-    $email_to = "kahill2014@gmail.com";
+    $email_to = "kahill2014@gmail.com"; // TODO: when complete, change this to austinhillassoc@aol.com
     $email_subject = "Contact from Austin Hill & Associates Website";
  
     function died($error) {
